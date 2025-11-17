@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Accessibility Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- Pale turquoise background for quiz page -->
+  <body class="pale-bg">
+
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <!-- Top bar: Home + "=" menu -->
+      <div class="top-bar">
+        <a href="homepage.html" class="home-logo">Home</a>
+        <label for="menu-toggle" class="menu-icon">=</label>
+      </div>
+
+      <!-- Hidden checkbox controls hamburger dropdown -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+      <h1>Web Accessibility Self-Assessment Quiz</h1>
+
+      <!-- Dropdown menu -->
+      <nav id="main-nav">
+        <ul>
+          <li><a href="page1.html">Accessibility Fundamentals</a></li>
+          <li><a href="page2.html">Semantic HTML</a></li>
+          <li><a href="page3.html">ARIA &amp; ARIA Labels</a></li>
+          <li><a href="page4.html">Accessible Forms</a></li>
+          <li><a href="page5.html">Color &amp; Contrast</a></li>
+          <li><a href="page6.html">Key Concepts</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="quiz.html" class="active">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+
+      <section>
+        <h2>Check Your Understanding</h2>
+        <p>Answer the questions below based on the content on this website.</p>
+      </section>
+
+      <section>
+        <h2>Quiz</h2>
+
+        <form id="accessibility-quiz">
+          <p id="quiz-instructions">
+            All questions are required. Some have one correct answer, others have more than one.
+          </p>
+
+          <!-- Question 1 -->
+          <fieldset>
+            <legend>Question 1 – Fill in the blank</legend>
+            <label for="q1">
+              The set of guidelines used to make web content more accessible is called
+              Web Content Accessibility _________ Guidelines (WCAG).
+            </label>
+            <input type="text" id="q1" name="q1" required />
+            <p id="q1-feedback" class="question-feedback"></p>
+          </fieldset>
+
+          <!-- Question 2 -->
+          <fieldset>
+            <legend>Question 2 – Multiple choice</legend>
+            <p>Which HTML element should contain the main content that is unique to a page?</p>
+
+            <label><input type="radio" name="q2" value="header" required /> &lt;header&gt;</label>
+            <label><input type="radio" name="q2" value="main" /> &lt;main&gt;</label>
+            <label><input type="radio" name="q2" value="footer" /> &lt;footer&gt;</label>
+            <label><input type="radio" name="q2" value="div" /> &lt;div&gt;</label>
+
+            <p id="q2-feedback" class="question-feedback"></p>
+          </fieldset>
+
+          <!-- Question 3 -->
+          <fieldset>
+            <legend>Question 3 – Multiple choice</legend>
+            <p>Which ARIA attribute is commonly used to give an accessible name to an icon-only button?</p>
+
+            <label><input type="radio" name="q3" value="aria-hidden" required /> aria-hidden</label>
+            <label><input type="radio" name="q3" value="aria-label" /> aria-label</label>
+            <label><input type="radio" name="q3" value="aria-role" /> aria-role</label>
+            <label><input type="radio" name="q3" value="aria-focus" /> aria-focus</label>
+
+            <p id="q3-feedback" class="question-feedback"></p>
+          </fieldset>
+
+          <!-- Question 4 -->
+          <fieldset>
+            <legend>Question 4 – Multiple choice</legend>
+            <p>Why should every input have a connected label?</p>
+
+            <label><input type="radio" name="q4" value="styling" required /> It makes the inputs easier to style.</label>
+            <label><input type="radio" name="q4" value="screenreaders" /> It helps screen readers announce what the input is for.</label>
+            <label><input type="radio" name="q4" value="shorter-code" /> It makes the HTML file shorter.</label>
+            <label><input type="radio" name="q4" value="mobile-only" /> It is required only for mobile devices.</label>
+
+            <p id="q4-feedback" class="question-feedback"></p>
+          </fieldset>
+
+          <!-- Question 5 -->
+          <fieldset>
+            <legend>Question 5 – Multi-select</legend>
+            <p>Select all examples of good accessibility practices:</p>
+
+            <label><input type="checkbox" name="q5" value="contrast" /> Using text colors with good contrast.</label>
+            <label><input type="checkbox" name="q5" value="color-only" /> Using only red text to show errors.</label>
+            <label><input type="checkbox" name="q5" value="keyboard" /> Making sure links and buttons work with the Tab key.</label>
+            <label><input type="checkbox" name="q5" value="no-labels" /> Removing labels to keep the form short.</label>
+
+            <p id="q5-feedback" class="question-feedback"></p>
+          </fieldset>
+
+          <div class="quiz-actions">
+            <button type="submit">Submit Quiz</button>
+            <button type="reset">Reset Quiz</button>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <h2>Your Results</h2>
+        <p id="overall-result"></p>
+        <p id="total-score"></p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>
+        This is a class project for IT 3203 – Web Development.
+        <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Course Site</a>
+      </p>
+    </footer>
+
+    <!-- Quiz logic -->
+    <script src="quiz.js"></script>
+  </body>
+</html>
