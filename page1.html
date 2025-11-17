@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility Fundamentals</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <!-- Home + menu -->
+      <div class="top-bar">
+        <a href="index.html" class="home-logo">Home</a>
+        <label for="menu-toggle" class="menu-icon">=</label>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+      <h1>Accessibility Fundamentals</h1>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="page1.html" class="active">Accessibility Fundamentals</a></li>
+          <li><a href="page2.html">Semantic HTML</a></li>
+          <li><a href="page3.html">ARIA &amp; ARIA Labels</a></li>
+          <li><a href="page4.html">Accessible Forms</a></li>
+          <li><a href="page5.html">Color &amp; Contrast</a></li>
+          <li><a href="page6.html">Key Concepts</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section>
+        <h2>What is Web Accessibility?</h2>
+        <p>
+          Web accessibility is about making websites usable by people with different
+          abilities and tools. For example, screen readers, magnifiers, voice
+          input, keyboard-only navigation, captions/alternative texts, and more.
+        </p>
+        <p>
+          Accessibility means thinking about many ways people see, hear, and interact with your content.
+        </p>
+
+        <img
+        src="https://www.hurix.com/wp-content/uploads/2023/11/Best-practices-of-Web-Accessibility-for-Developers-and-Designers-1.webp"
+        alt="Infographic showing best practices of web accessibility for developers and designers."
+        />
+        <figcaption>
+          Best practices for making websites accessible to everyone, including developers and designers.
+        </figcaption>
+        </figure>
+      </section>
+
+
+      <section>
+        <h2>Who Is Affected by Accessibility?</h2>
+
+        <h3>Visual Disabilities</h3>
+        <p>
+          Visual impairments can include low vision, color blindness, and total blindness. To interact with websites, these users often depend on tools like zoom, high-contrast settings, or screen readers to read page content aloud.
+        </p>
+
+        <h3>Hearing Disabilities</h3>
+        <p>
+          Users who can’t hear well depend on captions, transcripts, or visual cues rather than audio. Videos and audio files should always offer text alternatives of what’s being said.
+        </p>
+
+        <figure class="content-image">
+          <img 
+           src="https://www.accessibilitychecker.org/wp-content/uploads/2023/09/Infographic-Main-Types-of-Learning-Disabilities.jpg" 
+          alt="Infographic showing different types of learning disabilities"
+          />
+
+          <figcaption>
+            People experience the web in many different ways.
+          </figcaption>
+        </figure>
+
+        <h3>Motor Disabilities</h3>
+        <p>
+          Some users cannot use a mouse easily and rely on keyboard-only navigation,
+          switch devices, or other alternative inputs. The website should be fully usable
+          without a mouse.
+        </p>
+
+        <h3>Cognitive Disabilities</h3>
+        <p>
+          Clear layout, simple language, predictable navigation, and consistent headings
+          help users who are older, have ADHD, learning disabilities, or memory challenges follow
+          along without getting lost. Controls should be straightforward and self-explanatory.
+        </p>
+      </section>
+
+
+      <section>
+        <h2>WCAG in Simple Terms</h2>
+        <p>
+          The Web Content Accessibility Guidelines classify disabilities into four
+          main types. 
+        </p>
+        <ul>
+          <li><strong>Perceivable</strong> – users can see or hear the content.</li>
+          <li><strong>Operable</strong> – users can control the interface and move around.</li>
+          <li><strong>Understandable</strong> – content and behavior are clear and predictable.</li>
+          <li><strong>Robust</strong> – works across different browsers and assistive tech.</li>
+        </ul>
+
+        <figure class="content-image">
+          <figure class="content-image">
+            <img 
+            src="https://adasitecompliance.com/wp-content/uploads/2021/06/web-accessibility-to-avoid-lawsuit-adasitecompliance.jpg"
+            alt="Graphic showing the importance of web accessibility to avoid compliance issues and lawsuits."
+            />
+            <figcaption>
+            Web accessibility is required for inclusive design and legal compliance.
+            </figcaption>
+          </figure>
+
+          <figcaption>
+            The four WCAG principles check if a website meets the needs of all users.
+          </figcaption>
+        </figure>
+      </section>
+
+
+      <section>
+        <h2>Common Accessibility Mistakes</h2>
+        <p>
+          Many accessibility problems come from small design or coding choices that are
+          easy to fix once you know about them. Examples include:
+        </p>
+        <ul>
+          <li>Low contrast between text and background colors.</li>
+          <li>Missing or meaningless alt text on images.</li>
+          <li>Form fields without proper labels</li>
+          <li>Links and buttons that are too small or hard to click.</li>
+          <li>Content that requires mouse-only controls</li>
+          <li>Interactive elements that are confusing or unclear to assistive tools.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This is a class project for IT 3203 – Web Development.
+        <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Course Site</a>
+      </p>
+    </footer>
+  </body>
+</html>
