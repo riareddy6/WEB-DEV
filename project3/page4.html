@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Forms</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <div class="top-bar">
+        <a href="index.html" class="home-logo">Home</a>
+        <label for="menu-toggle" class="menu-icon">=</label>
+      </div>
+
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+      <h1>Accessible Forms</h1>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="page1.html">Accessibility Fundamentals</a></li>
+          <li><a href="page2.html">Semantic HTML</a></li>
+          <li><a href="page3.html">ARIA &amp; ARIA Labels</a></li>
+          <li><a href="page4.html" class="active">Accessible Forms</a></li>
+          <li><a href="page5.html">Color &amp; Contrast</a></li>
+          <li><a href="page6.html">Key Concepts</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="references.html">References</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main id="main-content">
+      <section>
+        <h2>Why Accessible Forms Matter</h2>
+        <p>
+          Forms are how people sign up, log in, pay for things, book appointments,
+          and contact support. If a form is not accessible, users with disabilities
+          may not be able to complete these basic tasks.
+        </p>
+        <p>
+          Accessible forms make sure that everyone can understand each field, move
+          through the questions, and fix mistakes when something goes wrong.
+        </p>
+
+        <figure class="content-image">
+          <img
+            src="https://colorlib.com/wp/wp-content/uploads/sites/2/best-bootstrap-autocomplete-forms.jpg.avif"
+            alt="Screenshot of various autocomplete form fields built with Bootstrap."
+          />
+          <figcaption>
+            Autocomplete form fields enhance usability and accessibility for people filling out forms.
+          </figcaption>
+        </figure>
+      </section>
+
+
+
+      <section>
+        <h2>Labels and Inputs</h2>
+        <p>
+          Every form control needs a label. Labels help sighted users and let screen
+          readers announce what the input is for. Clicking the label should also focus
+          the matching input.
+        </p>
+
+        <pre>
+          &lt;label for="email"&gt;Email address&lt;/label&gt;
+          &lt;input id="email" name="email" type="email" required /&gt;
+        </pre>
+
+        <p>
+          Avoid relying only on placeholder text as the label. Placeholders disappear
+          when users start typing, which can make it hard to remember what the field meant.
+        </p>
+      </section>
+
+      <section>
+        <h2>Grouping Related Fields</h2>
+        <p>
+          When you have a set of related options, such as radio buttons or checkboxes,
+          use <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> so it is
+          clear they belong together.
+        </p>
+
+        <pre>
+          &lt;fieldset&gt;
+          &lt;legend&gt;Preferred contact method&lt;/legend&gt;
+          &lt;label&gt;
+          &lt;input type="radio" name="contact" value="email" /&gt;
+          Email
+          &lt;/label&gt;
+          &lt;label&gt;
+          &lt;input type="radio" name="contact" value="phone" /&gt;
+          Phone
+          &lt;/label&gt;
+          &lt;/fieldset&gt;
+        </pre>
+
+        <figure class="content-image">
+          <img
+            src="https://colorlib.com/wp/wp-content/uploads/sites/2/best-bootstrap-autocomplete-forms.jpg.avif"
+            alt="Screenshot of various autocomplete form fields built with Bootstrap."
+          />
+          <figcaption>
+            Autocomplete form fields enhance usability and accessibility for people filling out forms.
+          </figcaption>
+        </figure>
+      </section>
+
+
+      <section>
+        <h2>Help Text and Error Messages</h2>
+        <p>
+          Instructions and error messages should be clearly connected to the fields
+          they describe. Users should not have to guess what went wrong.
+        </p>
+
+        <pre>
+&lt;label for="username"&gt;Username&lt;/label&gt;
+&lt;input
+  id="username"
+  name="username"
+/&gt;
+&lt;p id="username-help"&gt;Choose a name between 4 and 12 characters.&lt;/p&gt;
+&lt;p id="username-error"&gt;Usernames cannot contain spaces.&lt;/p&gt;
+        </pre>
+
+        <p>
+          Error messages should be specific so users know how to fix the problem
+          instead of just seeing “Invalid input.”
+        </p>
+      </section>
+
+      <section>
+        <h2>Keyboard Navigation</h2>
+        <p>
+          Many people fill out forms using only the keyboard. The Tab key should move
+          through fields in a logical order, and buttons should be reachable without a mouse.
+        </p>
+        <p>
+          Avoid changing the natural tab order by adding large positive
+          <code>tabindex</code> values. Let the browser follow the normal DOM order
+          whenever possible.
+        </p>
+      </section>
+
+      <section>
+        <h2>Example: Simple Accessible Form</h2>
+        <p>
+          This small form uses labels, clear grouping, and keyboard-friendly controls:
+        </p>
+
+        <form>
+          <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="name-example">Name</label>
+            <input id="name-example" name="name-example" type="text" />
+
+            <label for="email-example">Email</label>
+            <input id="email-example" name="email-example" type="email" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Message Type</legend>
+            <label>
+              <input type="radio" name="msg-type" value="question" />
+              Question
+            </label>
+            <label>
+              <input type="radio" name="msg-type" value="feedback" />
+              Feedback
+            </label>
+            <label>
+              <input type="radio" name="msg-type" value="other" />
+              Other
+            </label>
+          </fieldset>
+
+          <label for="message-example">Message</label>
+          <textarea id="message-example" name="message-example" rows="4"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This is a class project for IT 3203 – Web Development.
+        <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Course Site</a>
+      </p>
+    </footer>
+  </body>
+</html>
