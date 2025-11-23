@@ -1,25 +1,21 @@
-// This listens to the dropdown on index.html and navigates to the chosen page.
+//PAGE NAV
 const picker = document.getElementById('pagePicker');
 
-// If the element exists (it will on index.html), wire it up
 if (picker) {
   picker.addEventListener('change', function () {
-    const file = picker.value; // e.g., "index.html"
+    const file = picker.value; 
     if (file) {
-      // Go to that file
       window.location.href = file;
     }
   });
 }
 
-// NOTE: If you previously used showPage() for single-page switching,
-// you don't need it anymore since each page is its own HTML file now.
-// Back to Top Button Functionality
+
 document.addEventListener('DOMContentLoaded', function() {
   const backToTopButton = document.querySelector('.back-to-top');
 
   if (backToTopButton) {
-    // Show/hide button based on scroll position
+    // SHOW/HIDE FOR BUTTON
     window.addEventListener('scroll', function() {
       if (window.pageYOffset > 300) {
         backToTopButton.classList.add('show');
@@ -28,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // Scroll to top when clicked
+    // BUTTON CLICK
     backToTopButton.addEventListener('click', function() {
       window.scrollTo({
         top: 0,
@@ -37,8 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Lazy Loading for Images
+  // "LAZY LOAD" (IMG LOAD DELAY)
+  // https://stackoverflow.com/questions/5117421/how-to-load-images-dynamically-or-lazily-when-users-scrolls-them-into-view
+  // https://www.w3docs.com/snippets/javascript/lazy-load-images-with-javascript.html
   const images = document.querySelectorAll('img[src]');
+
 
   if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver(function(entries, observer) {
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Close sidebar when clicking on a link
+  // MENU SELECTION CLOSES SIDE BAR
   const navLinks = document.querySelectorAll('#main-nav a');
   const menuToggle = document.getElementById('menu-toggle');
 
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Close sidebar with Escape key
+  // ESC KEY CLOSES SIDE BAR TOO
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && menuToggle && menuToggle.checked) {
       menuToggle.checked = false;

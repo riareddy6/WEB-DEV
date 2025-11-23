@@ -1,20 +1,20 @@
-/* SMOOTH SCROLL */
+/* SMOOTHER SCROLL */
 html {
   scroll-behavior: smooth;
 }
 
-/* MAIN LAYOUT & TYPOGRAPHY */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0 0 70px; /* space so footer doesn't cover content */
+
+  /* PADDING FOR FOOTER */
+  padding: 0 0 70px; 
   line-height: 1.6;
   background-color: #f4f8f8;
-  color: #0b0b0b; /* strong body text contrast */
-  overflow-x: hidden; /* prevent horizontal scroll from sidebar */
-}
+  color: #0b0b0b; 
+  overflow-x: hidden;
 
-/* PAGE FADE-IN ANIMATION */
+/* PAGE FADE */
 main {
   animation: fadeIn 0.5s ease-in;
 }
@@ -30,7 +30,6 @@ main {
   }
 }
 
-/* ENHANCED FOCUS INDICATORS */
 *:focus {
   outline: 3px solid #0a8178;
   outline-offset: 2px;
@@ -45,7 +44,7 @@ select:focus {
   outline-offset: 2px;
 }
 
-/* SIDEBAR OVERLAY */
+/* SIDEBAR*/
 .sidebar-overlay {
   content: '';
   position: fixed;
@@ -67,12 +66,11 @@ select:focus {
   pointer-events: auto;
 }
 
-/* SPECIAL BACKGROUND FOR HOMEPAGE + QUIZ ONLY */
+/* DIF BACKGROUND FOR HOMEPAGE + QUIZ ONLY */
 .pale-bg {
-  background-color: #f2fcfc; /* very pale turquoise/white */
+  background-color: #f2fcfc; 
 }
 
-/* SKIP LINK */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -91,7 +89,7 @@ select:focus {
 
 /* HEADER */
 header {
-  background-color: #06403b; /* darker teal for better contrast */
+  background-color: #06403b; 
   color: #ffffff;
   padding: 0.5em 1em;
   position: fixed;
@@ -102,7 +100,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* TOP BAR: HOME + HAMBURGER */
+/* TOP BAR MENU */
 .top-bar {
   display: flex;
   align-items: center;
@@ -110,7 +108,7 @@ header {
   gap: 8px;
 }
 
-/* SOLID HOME BUTTON */
+/*REMOVED HOME LOGO BUT SAVING FOR REFERENCE*/
 .home-logo {
   display: inline-flex;
   align-items: center;
@@ -130,12 +128,12 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* HAMBURGER CHECKBOX (HIDDEN) */
+/* HIDE MENU CHECKBOX */
 .menu-toggle {
   display: none;
 }
 
-/* HAMBURGER ICON */
+/* MENU ICON*/
 .menu-icon {
   font-size: 1.6rem;
   cursor: pointer;
@@ -152,23 +150,23 @@ header {
   transform: scale(1.05);
 }
 
-/* HEADER TITLES – STRONG CONTRAST */
+/*HEADER FORMATS`*/
 h1 {
   margin: 0;
   font-size: 1.2rem;
-  color: #ffffff; /* white on dark teal */
+  color: #ffffff;
   flex: 1;
   text-align: center;
 }
 
 h2,
 h3 {
-  color: #02201d; /* very dark text for good contrast on light bg */
+  color: #02201d; 
 }
 
 /* NAVBAR - SIDEBAR MENU */
 nav#main-nav {
-  background-color: #06403b; /* darker teal for better contrast */
+  background-color: #06403b; 
   position: fixed;
   top: 0;
   left: 0;
@@ -182,7 +180,7 @@ nav#main-nav {
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* SIDEBAR HEADER WITH CLOSE BUTTON */
+/* SIDEBAR*/
 .sidebar-header {
   display: flex;
   justify-content: space-between;
@@ -219,25 +217,24 @@ nav#main-nav {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* NAV LIST */
+/* NAV */
 nav#main-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* NAV LINKS */
 nav#main-nav ul li a {
   display: block;
   padding: 15px 25px;
   text-decoration: none;
-  color: #ffffff; /* white on dark teal */
+  color: #ffffff; 
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 1rem;
   transition: background-color 0.2s ease, padding-left 0.2s ease;
 }
 
-/* ACTIVE LINK */
+
 nav#main-nav ul li a.active {
   font-weight: bold;
   background-color: #075c55;
@@ -251,12 +248,10 @@ nav#main-nav ul li a:hover {
   padding-left: 30px;
 }
 
-/* ACTIVE LINK HOVER */
 nav#main-nav ul li a.active:hover {
   background-color: #0a8178;
 }
 
-/* SHOW SIDEBAR WHEN CHECKBOX IS CHECKED */
 header .menu-toggle:checked ~ #main-nav {
   transform: translateX(0);
 }
@@ -311,7 +306,6 @@ section {
   margin: 0 auto;
 }
 
-/* LINKS IN CONTENT */
 main a {
   color: #06403b;
 }
@@ -320,7 +314,7 @@ main a:hover {
   text-decoration: underline;
 }
 
-/* HERO IMAGE ON HOMEPAGE */
+/* MAY NOT BE IN FINAL PROJ, IDK SAVING FOR REFERENCE*/
 .hero-image {
   margin: 16px 0;
   text-align: center;
@@ -332,7 +326,7 @@ main a:hover {
   border-radius: 6px;
 }
 
-/* GENERAL CONTENT IMAGES */
+
 .content-image {
   margin: 16px 0;
   text-align: center;
@@ -351,7 +345,7 @@ figure figcaption {
   margin-top: 4px;
 }
 
-/* CODE BLOCKS */
+/* CODE EXAMPLES*/
 pre {
   background-color: #e7f2f2;
   padding: 16px;
@@ -376,7 +370,7 @@ pre code {
   padding: 0;
 }
 
-/* DEFINITION LISTS */
+
 dl {
   margin: 0;
 }
@@ -464,7 +458,7 @@ input[type="reset"]:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* QUIZ UTIL STYLES */
+/* QUIZ STYLES */
 .quiz-actions {
   display: flex;
   gap: 10px;
