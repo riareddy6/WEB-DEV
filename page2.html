@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Learn about semantic HTML elements, proper page structure, heading levels, and how to avoid div soup for better web accessibility." />
+    <meta name="keywords" content="semantic HTML, HTML5, page structure, web accessibility" />
+    <meta name="author" content="IT 3203 Web Development Course" />
     <title>Semantic HTML &amp; Structure</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <link rel="stylesheet" href="style.css"/>
+</head>
 
-  <body>
-    <header>
-      <!-- home + menu -->
-      <div class="top-bar">
-        <a href="index.html" class="home-logo">Home</a>
-        <label for="menu-toggle" class="menu-icon">=</label>
-      </div>
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+<body>
+<header>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+    <label for="menu-toggle" class="sidebar-overlay"></label>
 
+    <div class="top-bar">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <h1>Semantic HTML</h1>
+    </div>
 
-      <h1>Semantic HTML</h1>
-      <nav id="main-nav">
+    <nav id="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="page1.html">Accessibility Fundamentals</a></li>
-          <li><a href="page2.html" class="active">Semantic HTML</a></li>
-          <li><a href="page3.html">ARIA &amp; ARIA Labels</a></li>
-          <li><a href="page4.html">Accessible Forms</a></li>
-          <li><a href="page5.html">Color &amp; Contrast</a></li>
-          <li><a href="page6.html">Key Concepts</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="references.html">References</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page1.html">Accessibility Fundamentals</a></li>
+            <li><a href="page2.html" class="active">Semantic HTML</a></li>
+            <li><a href="page3.html">ARIA &amp; ARIA Labels</a></li>
+            <li><a href="page4.html">Accessible Forms</a></li>
+            <li><a href="page5.html">Color &amp; Contrast</a></li>
+            <li><a href="page6.html">Key Concepts</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
         </ul>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-   
 
-    <main id="main-content">
+<main id="main-content">
 
-      <section> 
-        <h2>What Is Semantic HTML?</h2> 
+    <section>
+        <h2>What Is Semantic HTML?</h2>
         <p>
-          Semantic HTML involves using specific HTML5 elements to structure your content based on its meaning or purpose, rather than just its visual presentation.
+            Semantic HTML involves using specific HTML5 elements to structure your content based on its meaning or
+            purpose, rather than just its visual presentation.
         </p>
         <p>
-          Instead of writing everything inside generic containers like <div> and <span>, you use elements that clearly communicate the role of the content they wrap.
+            Instead of writing everything inside generic containers like
+            &lt;div&gt; and &lt;span&gt;, you use elements that clearly communicate the role of the content they wrap.
         </p>
 
         <figure class="content-image">
-          <img
-            src="https://techgurudehradun.in/blog/wp-content/uploads/2024/01/html-semantic-layout.jpg"
-            alt="Diagram showing a semantic HTML page layout with header, nav, main, and footer sections."
-          />
-          <figcaption>
-            Semantic elements help screen readers and browsers better understand the structure of a page.
-          </figcaption>
+            <img
+                    src="https://techgurudehradun.in/blog/wp-content/uploads/2024/01/html-semantic-layout.jpg"
+                    alt="Diagram showing a semantic HTML page layout with header, nav, main, and footer sections."
+            />
+            <figcaption>
+                Semantic elements help screen readers and browsers better understand the structure of a page.
+            </figcaption>
         </figure>
-      </section>
+    </section>
 
 
-      <section>
+    <section>
         <h2>Structural Elements</h2>
         <p>
-          These elements describe the big sections of a page. They make it easier to
-          understand how content is grouped and how the layout is organized.
+            These elements describe the big sections of a page. They make it easier to
+            understand how content is grouped and how the layout is organized.
         </p>
         <ul>
-          <li>
             <li><strong>header</strong> – The intro or top area of a page or section.</li>
             <li><strong>nav</strong> – A group of navigation links.</li>
             <li><strong>main</strong> – The main unique content of the page.</li>
@@ -73,97 +77,89 @@
             <li><strong>article</strong> – Self-contained content that could stand alone.</li>
             <li><strong>aside</strong> – Extra or side content related to the main content.</li>
             <li><strong>footer</strong> – The bottom area with extra info or links.</li>
-          </li>
         </ul>
         <p>
-          When these are used correctly, the page outline makes sense even without
-          seeing the visual design.
+            When these are used correctly, the page outline makes sense even without
+            seeing the visual design.
         </p>
-      </section>
+    </section>
 
 
-      <section>
+    <section>
         <h2>Heading Levels and Page Outline</h2>
         <p>
-          Headings (h1 through h6) help create the outline of your page. Most pages should
-          have one h1 for the main title, and then use h2, h3, and the rest for section
-          and subsection titles.
+            Headings (h1 through h6) help create the outline of your page. Most pages should
+            have one h1 for the main title, and then use h2, h3, and the rest for section
+            and subsection titles.
         </p>
         <p>
-          A clear outline makes it easy for people to skim the page and find what they
-          need quickly. It also helps screen readers jump between sections, so users don’t
-          have to listen to the whole page in order.
-      </p>
-      </section>
-
-      <figure class="content-image">
-        <img
-          src="https://spcdn.shortpixel.ai/spio/ret_img,q_cdnize,to_webp,s_webp/www.goodfellastech.com/wp-content/uploads/2024/08/html-heading-tags-1536x960.jpg"
-          alt="Diagram showing different HTML heading levels such as h1, h2, and h3."
-        />
-        <figcaption>
-          Headings act as a table of contents for your page, and improves accessibility for screenreaders.
-        </figcaption>
-      </figure>
-
-
-        <p>
-          A common mistake is to pick heading levels based only on how big they look.
-          Instead, you should style headings with CSS and keep the levels meaningful
-          for structure.
+            A clear outline makes it easy for people to skim the page and find what they
+            need quickly. It also helps screen readers jump between sections, so users don’t
+            have to listen to the whole page in order.
         </p>
-      </section>
+        <figure class="content-image">
+            <img
+                    src="https://spcdn.shortpixel.ai/spio/ret_img,q_cdnize,to_webp,s_webp/www.goodfellastech.com/wp-content/uploads/2024/08/html-heading-tags-1536x960.jpg"
+                    alt="Diagram showing different HTML heading levels such as h1, h2, and h3."
+            />
+            <figcaption>
+                Headings act as a table of contents for your page, and improves accessibility for screen readers.
+            </figcaption>
+        </figure>
+    </section>
 
-      <section>
+    <section>
+        <p>
+            A common mistake is to pick heading levels based only on how big they look.
+            Instead, you should style headings with CSS and keep the levels meaningful
+            for the structure.
+        </p>
+    </section>
+
+    <section>
         <h2>Inline Semantic Elements</h2>
         <p>
-          Semantic HTML is not just about sections and layout. Inline elements can also
-          carry meaning that tools and users can understand.
+            Semantic HTML is not just about sections and layout. Inline elements can also
+            carry meaning that tools and users can understand.
         </p>
         <ul>
-
-        <ul>
-          <li><strong>strong</strong> — marks important text.</li>
-          <li><strong>em</strong> — emphasizes text with stress.</li>
-          <li><strong>mark</strong> — highlights key text.</li>
-          <li><strong>abbr</strong> — labels an abbreviation and lets you add its full meaning.</li>
-          <li><strong>time</strong> — marks a date or time for browsers and tools.</li>
-        </ul>
-
-          </li>
+            <li><strong>strong</strong> — marks important text.</li>
+            <li><strong>em</strong> — emphasizes text with stress.</li>
+            <li><strong>mark</strong> — highlights key text.</li>
+            <li><strong>abbr</strong> — labels an abbreviation and lets you add its full meaning.</li>
+            <li><strong>time</strong> — marks a date or time for browsers and tools.</li>
         </ul>
         <p>
-          Using these correctly gives extra context while still looking like normal
-          styled text visually.
+            Using these correctly gives extra context while still looking like normal
+            styled text visually.
         </p>
-          <figcaption>
-            Inline elements add meaning to words, not just visual styles.
-          </figcaption>
-        </figure>
-      </section>
+    </section>
 
-      
-      <section>
+    <section>
         <h2>Semantic HTML vs. “Div Soup”</h2>
         <p>
-          A page built only with <code>&lt;div&gt;</code> and
-          <code>&lt;span&gt;</code> tags is often called “div soup.” It might look
-          okay visually, but it gives almost no information about what each part of
-          the page means.
+            A page built only with <code>&lt;div&gt;</code> and
+            <code>&lt;span&gt;</code> tags is often called “div soup.” It might look
+            okay visually, but it gives almost no information about what each part of
+            the page means.
         </p>
         <p>
-          Semantic HTML reduces “div soup” and replaces it with meaningful tags. This
-          is one of the easiest ways to improve accessibility and maintainable code
-          without adding extra libraries.
+            Semantic HTML reduces “div soup” and replaces it with meaningful tags. This
+            is one of the easiest ways to improve accessibility and maintainable code
+            without adding extra libraries.
         </p>
-      </section>
-    </main>
+    </section>
+</main>
 
-    <footer>
-      <p>
+<footer>
+    <p>
         This is a class project for IT 3203 – Web Development.
         <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Course Site</a>
-      </p>
-    </footer>
-  </body>
+    </p>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
 </html>

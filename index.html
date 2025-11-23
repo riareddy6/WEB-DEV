@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Web Accessibility – Home</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <link rel="stylesheet" href="style.css"/>
+</head>
 
-  <!-- blue white bg css -->
-  <body class="pale-bg">
+<body class="pale-bg">
 
-    <header>
-      <!-- home and drop down bar -->
-      <div class="top-bar">
-        <!-- Home button -->
-        <a href="index.html" class="home-logo">Home</a>
-        <label for="menu-toggle" class="menu-icon">=</label>
-      </div>
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+<header>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+    <label for="menu-toggle" class="sidebar-overlay"></label>
 
-      
-      <h1>Web Accessibility (A11y)</h1>
+    <div class="top-bar">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <h1>Web Accessibility (A11y)</h1>
+    </div>
 
-      <!-- DROPDOWN OPTIONS -->
-      <nav id="main-nav">
+    <nav id="main-nav">
         <ul>
-          <li><a href="page1.html">Accessibility Fundamentals</a></li>
-          <li><a href="page2.html">Semantic HTML</a></li>
-          <li><a href="page3.html">ARIA &amp; ARIA Labels</a></li>
-          <li><a href="page4.html">Accessible Forms</a></li>
-          <li><a href="page5.html">Color &amp; Contrast</a></li>
-          <li><a href="page6.html">Key Concepts</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="references.html">References</a></li>
-          <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page1.html">Accessibility Fundamentals</a></li>
+            <li><a href="page2.html">Semantic HTML</a></li>
+            <li><a href="page3.html">ARIA &amp; ARIA Labels</a></li>
+            <li><a href="page4.html">Accessible Forms</a></li>
+            <li><a href="page5.html">Color &amp; Contrast</a></li>
+            <li><a href="page6.html">Key Concepts</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
         </ul>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-    <main id="main-content">
-      <section>
-        <h2>Making Websites Accesible</h2>
-
-<figure class="hero-image">
-  <img 
-    src="web-dev-home.jpg" 
-    alt="figure of a person in wheelchair using a laptop"
-  />
-  <figcaption>Accessibility aids users with disabilities. </figcaption>
-</figure>
-
-
+<main id="main-content">
+    <section>
+        <h2>Making Websites Accessible</h2>
         <p>
-          This website aims to introduce users to the tools and techniques used to make websites more accessible. This includes how to properly use semantic HTML, ARIA labelling, forms, color contrast, and color schemes to develop websites that everyone can use with ease. Websites must be designed with consideration towards visual, auditory, motor, or cognitive disabilities. Making sure content is readable (font size, color, contrast), controls are simple to use, and pages work with screen readers are three ways this is done. Not only does this provide a seamless experience for disabled users, they improve the website overall.
+            This website aims to introduce users to the tools and techniques used to make websites more accessible. This
+            includes how to properly use semantic HTML, ARIA labeling, forms, color contrast, and color schemes to
+            develop websites that everyone can use with ease. Websites must be designed with consideration towards
+            visual, auditory, motor, or cognitive disabilities. Making sure content is readable (font size, color,
+            contrast), controls are straightforward to use, and pages work with screen readers are three ways this is done. Not
+            only does this provide a seamless experience for disabled users, they improve the website overall.
         </p>
-      </section>
+        <figure class="hero-image">
+            <img
+                    src="web-dev-home.jpg"
+                    alt="figure of a person in wheelchair using a laptop"
+            />
+            <figcaption>Accessibility aids users with disabilities.</figcaption>
+        </figure>
+    </section>
 
-      
-      <section>
+
+    <section>
         <h2>Key Concepts</h2>
         <ul>
-          <li><strong>A11y:</strong> Short form for "accessibility."</li>
-          <li><strong>WCAG:</strong> Guidelines for web accessibility.</li>
-          <li><strong>Screen Reader:</strong> Reads screen aloud using alt texts, img description. </li>
-          <li><strong>Semantic HTML:</strong> HTML tags describe the content. </li>
-          <li><strong>ARIA:</strong> Additional attributes for custom elements.</li>
+            <li><strong>A11y:</strong> Short form for "accessibility."</li>
+            <li><strong>WCAG:</strong> Guidelines for web accessibility.</li>
+            <li><strong>Screen Reader:</strong> Reads screen aloud using alt texts, img description.</li>
+            <li><strong>Semantic HTML:</strong> HTML tags describe the content.</li>
+            <li><strong>ARIA:</strong> Additional attributes for custom elements.</li>
         </ul>
-      </section>
+    </section>
 
-    </main>
+</main>
 
-    <footer>
-      <p>
-        Class project for IT 3203 – Web Development. All content is not owned, and has been linked in the references section.
+<footer>
+    <p>
+        Class project for IT 3203 – Web Development. All content is not owned and has been linked in the references
+        section.
         <a href="https://ksuweb.github.io/IT3203/" target="_blank">Course Site</a>
-      </p>
-    </footer>
+    </p>
+</footer>
 
-  </body>
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
 </html>
