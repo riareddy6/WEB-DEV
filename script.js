@@ -10,7 +10,6 @@ if (picker) {
   });
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
   const backToTopButton = document.querySelector('.back-to-top');
 

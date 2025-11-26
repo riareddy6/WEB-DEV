@@ -71,22 +71,6 @@ select:focus {
   background-color: #f2fcfc; 
 }
 
-.skip-link {
-  position: absolute;
-  left: -999px;
-  top: 0;
-  background-color: #06302c;
-  color: #ffffff;
-  padding: 8px 12px;
-  text-decoration: none;
-  z-index: 100;
-}
-
-.skip-link:focus {
-  left: 8px;
-  top: 8px;
-}
-
 /* HEADER */
 header {
   background-color: #06403b; 
@@ -108,7 +92,7 @@ header {
   gap: 8px;
 }
 
-/*REMOVED HOME LOGO BUT SAVING FOR REFERENCE*/
+/*REMOVED HOME LOGO BUT SAVING FOR REFERENCE
 .home-logo {
   display: inline-flex;
   align-items: center;
@@ -127,6 +111,7 @@ header {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+*/
 
 /* HIDE MENU CHECKBOX */
 .menu-toggle {

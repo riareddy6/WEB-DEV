@@ -1,4 +1,4 @@
-// * Simple quiz logic for Web Accessibility site
+// QUIZ FUNCTIONALITY FOR ACCESSIBILITY QUIZ PAGE
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("accessibility-quiz");
@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// * Handle quiz submit
+// QUIZ SUBMISSION HANDLER
 function handleSubmit(event) {
   event.preventDefault();
 
   let score = 0;
   const totalQuestions = 5;
 
-  // * Q1 – text input (answer: "Guidelines")
+  // Q1
   const q1Input = document.getElementById("q1");
   const q1Feedback = document.getElementById("q1-feedback");
   const q1Answer = q1Input.value.trim().toLowerCase();
@@ -38,35 +38,35 @@ function handleSubmit(event) {
     q1Feedback.className = "question-feedback incorrect";
   }
 
-  // * Q2 – correct: <main>
+  // Q2 
   score += handleRadioQuestion(
     "q2",
     "main",
     "q2-feedback"
   );
 
-  // * Q3 – correct: aria-label
+  //  Q3
   score += handleRadioQuestion(
     "q3",
     "aria-label",
     "q3-feedback"
   );
 
-  // * Q4 – correct: screenreaders
+  //  Q4 
   score += handleRadioQuestion(
     "q4",
     "screenreaders",
     "q4-feedback"
   );
 
-  // * Q5 – multi-select; correct: contrast + keyboard only
+  //  Q5 
   score += handleMultiSelectQuestion(
     "q5",
     ["contrast", "keyboard"],
     "q5-feedback"
   );
 
-  // * Show total score + message
+  // SCORE AND FEEDBACK 
   const totalScoreEl = document.getElementById("total-score");
   const overallResultEl = document.getElementById("overall-result");
 
@@ -92,7 +92,7 @@ function handleSubmit(event) {
   }
 }
 
-// * Helper: handle single-answer radio questions
+// SINGLEANSWER
 function handleRadioQuestion(name, correctValue, feedbackId) {
   const selected = document.querySelector(`input[name="${name}"]:checked`);
   const feedback = document.getElementById(feedbackId);
@@ -116,7 +116,7 @@ function handleRadioQuestion(name, correctValue, feedbackId) {
   }
 }
 
-// * Helper: handle multi-select checkbox question
+// MULTI CHECKBOX ANSWER
 function handleMultiSelectQuestion(name, correctValues, feedbackId) {
   const feedback = document.getElementById(feedbackId);
   if (!feedback) return 0;
@@ -136,7 +136,7 @@ function handleMultiSelectQuestion(name, correctValues, feedbackId) {
 
   let allCorrect = checked.length === correctValues.length;
 
-  // * Check if every checked value is one of the correct ones
+  // VERIFY CHECKED
   checkedSet.forEach((val) => {
     if (!correctSet.has(val)) {
       allCorrect = false;
@@ -155,16 +155,14 @@ function handleMultiSelectQuestion(name, correctValues, feedbackId) {
   }
 }
 
-// * Handle quiz reset
+// REDO QUIZ
 function handleReset() {
-  // * Clear all feedback messages
   const feedbackEls = document.querySelectorAll(".question-feedback");
   feedbackEls.forEach((el) => {
     el.textContent = "";
     el.className = "question-feedback";
   });
 
-  // * Clear overall result + total
   const totalScoreEl = document.getElementById("total-score");
   const overallResultEl = document.getElementById("overall-result");
 
